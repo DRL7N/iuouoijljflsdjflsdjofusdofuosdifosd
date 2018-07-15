@@ -56,7 +56,7 @@ https://discord.gg/HxPDpbA
 
  client.on('message', message => {
   if (message.content === '!تعالو') {   
-      if (message.author.id !== '445630664671232000')
+      if (message.author.id !== '447179855898083338')
  return message.react('⚠')
     const channel = message.member.voiceChannel;
 
@@ -68,7 +68,7 @@ https://discord.gg/HxPDpbA
 
  client.on('message', message => {
   if (message.content === '!برا') {   
-      if (message.author.id !== '445630664671232000')
+      if (message.author.id !== '447179855898083338')
  return message.react('🤦🏻‍♂️')
     const channel = message.member.voiceChannel;
 
