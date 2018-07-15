@@ -54,6 +54,28 @@ https://discord.gg/HxPDpbA
 
 })
 
+ client.on('message', message => {
+  if (message.content === '!تعالو') {   
+      if (message.author.id !== '445630664671232000')
+ return message.react('⚠')
+    const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  }
+});
+
+ client.on('message', message => {
+  if (message.content === '!برا') {   
+      if (message.author.id !== '445630664671232000')
+ return message.react('🤦🏻‍♂️')
+    const channel = message.member.voiceChannel;
+
+    channel.leave()
+  }
+});
+
 
 
 
