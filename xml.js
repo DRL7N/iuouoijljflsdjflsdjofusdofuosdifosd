@@ -28,35 +28,28 @@ client.on('ready', () => {
   console.log('')
 });
 
-client.on("guildMemberRemove", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-بعض الاشخاص يبحثون عن مكان جميل 
- والبعض يجعل المكان جميلا :black_heart: . 
-نورنا ي قشطه:heart_eyes:  
-https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
-https://discord.gg/hje7Aqx
-الدعووة خاصة لك يا  [ ${member}  ]
-**`) 
-}).catch(console.error)
+ client.on('message', message => {
+  if (message.content === '1-fa') {   
+      if (message.author.id !== '383394687349948426')
+ return message.react('⚠')
+    const channel = message.member.voiceChannel;
 
-})
- 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-   return channel.send(` 
-**
-بعض الاشخاص يبحثون عن مكان جميل 
- والبعض يجعل المكان جميلا :black_heart: . 
-نورنا ي قشطه:heart_eyes:  
-https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
-https://discord.gg/hje7Aqx
-الدعووة خاصة لك يا  [ ${member}  ]
-**`) 
-}).catch(console.error)
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  }
+});
 
-})
+ client.on('message', message => {
+  if (message.content === '2-fa') {   
+      if (message.author.id !== '383394687349948426')
+ return message.react('🤦🏻‍♂️')
+    const channel = message.member.voiceChannel;
+
+    channel.leave()
+  }
+});
+
 
 
 
