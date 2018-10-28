@@ -53,6 +53,31 @@ client.on('ready', () => {
 
 
 
+client.on("guildMemberRemove", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+تعال وما بقالي يوم 
+  في غيابك يصبرني .. !! 
+https://discord.gg/HxPDpbA
+الدعووة خاصة لك يا  [ ${member}  ]
+**`) 
+}).catch(console.error)
+
+})
+ 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+   return channel.send(` 
+**
+تعال وما بقالي يوم 
+  في غيابك يصبرني .. !! 
+https://discord.gg/HxPDpbA
+الدعووة خاصة لك يا  [ ${member}  ]
+**`) 
+}).catch(console.error)
+
+})
 
 
 
